@@ -59,7 +59,8 @@ typedef struct {
                     // to be part of a potential "winning" pair 
                     if(valueOfInnerObject >= (valueOfOuterObject + maximumDifferenceOfInnerloop))
                     {
-                        NSLog( @"comparing %ld and %ld (diff of %ld); max diff of inner loop is %ld, current maximum is %ld", valueOfOuterObject, valueOfInnerObject, (valueOfInnerObject - valueOfOuterObject),  maximumDifferenceOfInnerloop, bObject.maximumDifference);
+                        //if you wanted to see how the comparisons are going along, just un-comment the next line of code
+                        //NSLog( @"comparing %ld and %ld (diff of %ld); max diff of inner loop is %ld, current maximum is %ld", valueOfOuterObject, valueOfInnerObject, (valueOfInnerObject - valueOfOuterObject),  maximumDifferenceOfInnerloop, bObject.maximumDifference);
 
                         maximumDifferenceOfInnerloop = (valueOfInnerObject - valueOfOuterObject);
                         // if the maximum difference of this inner loop calculation is bigger than the 
@@ -94,6 +95,7 @@ int main(int argc, const char * argv[])
         // our array is made up of NSString objects only because it's easier on your eyes to look at the 
         // below line of code versus doing [NSNumber numberWithInt: 200] for each number in the array
         
+        // if you'd like to see how other arrays work, just un-comment one of them out
         //NSArray * arrayToTryOut = [[NSArray alloc] initWithObjects: @"200", @"400", @"100", @"350", nil];
         //NSArray * arrayToTryOut = [[NSArray alloc] initWithObjects: @"2", @"3", @"5", @"1", @"3", @"2", nil];
         NSArray * arrayToTryOut = [[NSArray alloc] initWithObjects: @"3", @"2", @"1", @"4", @"5", @"6", @"7", nil];
